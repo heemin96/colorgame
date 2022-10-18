@@ -70,7 +70,7 @@ const App = () => {
         setTime(0);
       }
     }
-  },[time, itemList]);
+  },[time]);
 
   // 정답 맞추면 호출됨
   useEffect(() => {
@@ -92,7 +92,7 @@ const App = () => {
       tmpList.push(i);
     }
     setItemList(tmpList);
-  }, [stage, isPlaying]);
+  }, [stage]);
 
   useEffect(() => {
     if (isPlaying) {
@@ -112,7 +112,7 @@ const App = () => {
       }
       return () => clearInterval(timer);
     }
-  }, [time, isPlaying]);
+  }, [time]);
 
   return (
     <div className="body">

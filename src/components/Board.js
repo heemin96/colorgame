@@ -1,6 +1,4 @@
-import React, { memo } from "react";
 import styled from "@emotion/styled";
-
 
 //전체 크기
 const BoardContainer = styled.div`
