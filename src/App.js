@@ -24,7 +24,7 @@ const randomColor = (ranNum, baseNum) => {
 }
 
 const AnswerColor = (stage, baseColor)=> {
-  const randomcolorArr = baseColor.slice(4,-1).split(','); // baseColor로 넘어온 값이 rgb(ran1, ran2, ran3) .slice.split--> colorArr = [ran1,ran2,ran3]
+  const randomcolorArr = baseColor.slice(4,-1).split(','); // baseColor로 넘어온 값이 rgb(ran1, ran2, ran3) .slice.split--> randomcolorArr = [ran1,ran2,ran3]
   console.log(baseColor)
   
   const num = Math.floor(Math.random() * (100-stage)+10); // ex) stage 1  --> (0.1x99) + 10  num = 19
@@ -96,9 +96,7 @@ const App = () => {
 
   useEffect(() => {
     if (isPlaying) {
-      let timer = setInterval(() => {
-        setTime(time - 1);
-      }, 1000);
+      let timer = setInterval(() => {setTime(time - 1);}, 1000);
       
       if (time <= 0) {
         clearInterval(timer);
